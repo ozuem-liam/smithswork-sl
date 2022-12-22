@@ -34,6 +34,16 @@ router.post('/sender', async  (req, res, next) => {
       });
 });
 
+router.get('/sender', async  (req, res, next) => {
+    const messages = await Sender.find({});
+
+    res.status(httpStatus.OK).json({
+        code: httpStatus.OK,
+        message: 'Sender answers was successfully fetched',
+        data: messages,
+      });
+});
+
 router.post('/community', async  (req, res, next) => {
     const { error } = validateQuestionnaireSchema(req.body);
     if (error) return next(new ApiError(httpStatus.BAD_REQUEST, error.details[0].message));
@@ -58,6 +68,16 @@ router.post('/community', async  (req, res, next) => {
         code: httpStatus.OK,
         message: 'Community courier  answers was successfully saved',
         data: message,
+      });
+});
+
+router.get('/community', async  (req, res, next) => {
+    const messages = await Community.find({});
+
+    res.status(httpStatus.OK).json({
+        code: httpStatus.OK,
+        message: 'Community courier  answers was successfully fetched',
+        data: messages,
       });
 });
 
