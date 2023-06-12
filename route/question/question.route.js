@@ -69,27 +69,31 @@ router.post("/community", async (req, res, next) => {
   const {
     gender,
     email,
-    income,
+    location,
     age,
-    travel_frequency,
-    q1,
-    q2,
-    q3,
-    q4,
-    q5,
+    scale,
+    qualification,
+    packageSize,
+    need,
+    items,
+    urgency,
+    newCourier,
+    enteredConcerns,
     notes,
   } = req.body;
   const message = new Community();
   message.gender = gender;
   message.email = email;
-  message.income = income;
+  message.location = location;
   message.age = age;
-  message.travel_frequency = travel_frequency;
-  message.q1 = q1;
-  message.q2 = q2;
-  message.q3 = q3;
-  message.q4 = q4;
-  message.q5 = q5;
+  message.scale = scale;
+  message.qualification = qualification;
+  message.packageSize = packageSize;
+  message.need = need;
+  message.items = items;
+  message.urgency = urgency;
+  message.newCourier = newCourier;
+  message.enteredConcerns = enteredConcerns;
   message.notes = notes;
 
   await message.save();
