@@ -10,7 +10,7 @@ const communitySchema = new Schema(
             type: String,
             required: true,
         },
-        income: {
+        location: {
             type: String,
             required: false,
         },
@@ -18,27 +18,35 @@ const communitySchema = new Schema(
             type: String,
             required: false,
         },
-        travel_frequency: {
+        scale: {
             type: String,
             required: false,
         },
-        q1: {
+        qualification: {
             type: String,
             required: false,
         },
-        q2: {
+        packageSize: {
             type: String,
             required: false,
         },
-        q3: {
+        need: {
             type: String,
             required: false,
         },
-        q4: {
+        items: {
             type: String,
             required: false,
         },
-        q5: {
+        urgency: {
+            type: String,
+            required: false,
+        },
+        newCourier: {
+            type: String,
+            required: false,
+        },
+        enteredConcerns: {
             type: String,
             required: false,
         },

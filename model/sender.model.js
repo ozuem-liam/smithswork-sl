@@ -10,7 +10,7 @@ const senderSchema = new Schema(
             type: String,
             required: true,
         },
-        income: {
+        location: {
             type: String,
             required: false,
         },
@@ -18,27 +18,35 @@ const senderSchema = new Schema(
             type: String,
             required: false,
         },
-        travel_frequency: {
+        scale: {
             type: String,
             required: false,
         },
-        q1: {
+        qualification: {
             type: String,
             required: false,
         },
-        q2: {
+        listLocation: {
             type: String,
             required: false,
         },
-        q3: {
+        weight: {
             type: String,
             required: false,
         },
-        q4: {
+        plans: {
             type: String,
             required: false,
         },
-        q5: {
+        pickupAndDropoff: {
+            type: String,
+            required: false,
+        },
+        enteredAddress: {
+            type: String,
+            required: false,
+        },
+        enteredCompensation: {
             type: String,
             required: false,
         },
